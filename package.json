@@ -1,5 +1,5 @@
 {
-    "name": "wxn-nestjs-boilerplate",
+    "name": "api",
     "version": "0.0.1",
     "description": "Nest is an MIT-licensed open source project. Webxnet use Nest for some of our backend service.",
     "author": "Gilson Peloso",
@@ -10,7 +10,7 @@
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "start": "nest start",
-        "dev": "kill-port 3333 && nest start --watch",
+        "dev": "kill-port 3000 && nest start --watch",
         "clean": "rm -rf dist",
         "up": "npm -s run clean && npm run build && docker-compose up -d -V --build",
         "down": "docker-compose down",
