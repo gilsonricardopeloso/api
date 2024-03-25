@@ -7,6 +7,10 @@ import { AppModule } from './app.module'
 async function bootstrap() {
     const logger = new Logger('Main')
     const app = await NestFactory.create<NestExpressApplication>(AppModule)
+    app.enableCors({
+        credentials: true,
+        origin: 'http://localhost:3000',
+    })
     app.setViewEngine('hbs')
     app.useGlobalPipes(
         new ValidationPipe({
